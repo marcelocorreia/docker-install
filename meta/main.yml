@@ -3,7 +3,7 @@
 galaxy_info:
   author: Marcelo Correia
   company: Star Visitor
-  description: "Installs latest Docker Compose via PIP"
+  description: "Installs latest Docker from docker.io"
   min_ansible_version: 1.4
   license: MIT
   platforms:

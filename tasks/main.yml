@@ -1,3 +1,11 @@
 ---
-- name: Install Docker Compose via PIP
-  pip: name=docker-compose
+
+- name: Install latest docker
+  shell: "curl -sSL https://get.docker.com/ | sh"
+  sudo: true
+
+- name: Add user to docker group
+  user: name={{docker_user}} shell=/bin/bash groups={{docker_user}},docker append=yes
+
+- name: Run update-rc.d command to start docker on boot
+  command: update-rc.d docker start 67 2 3 4 5 . stop 67 0 1 6 .
