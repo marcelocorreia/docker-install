@@ -4,7 +4,7 @@ galaxy_info:
   author: Marcelo Correia
   company: Star Visitor
   description: "Installs latest Docker from docker.io"
-  min_ansible_version: 1.4
+  min_ansible_version: 1.7
   license: MIT
   platforms:
   - name: Ubuntu
