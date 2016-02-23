@@ -16,3 +16,9 @@ Install the latest docker engine.
       - { role: marcelocorreia.docker-install, tags: ['install','hashicorp','consul', 'dnsmasq','config']}
 
 ```
+## Default variables
+
+```
+docker_user: docker
+docker_group: docker
+```
