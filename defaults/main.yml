@@ -1,2 +1,5 @@
 ---
-docker_user: docker
+docker:
+  user: {{ docker_user | default('docker')}}
+  group: {{ docker_group | default('docker')}}
+
