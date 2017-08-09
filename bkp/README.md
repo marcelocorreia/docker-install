@@ -5,7 +5,8 @@ Install the latest docker engine.
 
 ## Example Playbook
 
-```
+```yml
+---
   - hosts:
       - myhost.blahblah.
     sudo: yes
@@ -15,7 +16,6 @@ Install the latest docker engine.
       - { role: marcelocorreia.docker-install, tags: ['install','hashicorp','consul', 'dnsmasq','config']}
 
 ```
-
 ## Default variables
 
 ```

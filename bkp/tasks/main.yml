@@ -1,0 +1,21 @@
+---
+
+- name: Install latest docker
+  shell: "curl -fsSL https://get.docker.com/ | sh"
+  sudo: true
+
+- name: Add Docker Group
+  group:
+    name: "{{docker.group}}"
+    state: present
+
+- name: Add user to docker group
+  user:
+    name={{docker.user}}
+    shell=/bin/bash
+    groups={{ docker.group }}
+    append=yes
+
+
+- name: Run update-rc.d command to start docker on boot
+  command: update-rc.d docker start 67 2 3 4 5 . stop 67 0 1 6 .
