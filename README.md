@@ -12,7 +12,7 @@ Install the latest docker engine.
     gather_facts: true
 
     roles:
-      - { role: marcelocorreia.docker-install, tags: ['install','hashicorp','consul', 'dnsmasq','config']}
+      - marcelocorreia.docker-install
 
 ```
 
