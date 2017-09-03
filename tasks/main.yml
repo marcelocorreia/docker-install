@@ -51,7 +51,7 @@
   with_items:
     - "linux-image-extra-{{ kernel_version }}"
     - "linux-image-extra-virtual"
-    - "docker-engine"
+    - "{{ docker.version }}"
 
 - name: Add user to docker group
   become: true

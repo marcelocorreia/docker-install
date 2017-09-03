@@ -1,5 +1,6 @@
 ---
 docker:
-  user: "{{ docker_user | default('docker')}}"
+  user: "{{ docker_user | default('docker') }}"
+  version: "{{ docker_version | default('docker-engine') }}"
 
 
