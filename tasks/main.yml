@@ -49,8 +49,6 @@
     name: "{{ item }}"
     update_cache: true
   with_items:
-    - "linux-image-extra-{{ kernel_version }}"
-    - "linux-image-extra-virtual"
     - "{{ docker.version }}"
 
 - name: Add user to docker group
